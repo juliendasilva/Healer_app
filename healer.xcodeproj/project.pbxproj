@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC7D0733344BDA5FDBCE1B6E /* libPods-healer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4713B69A03B2AB88ADDAA64E /* libPods-healer.a */; };
 		F999E99220EB58CA0076CB20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F999E99120EB58CA0076CB20 /* AppDelegate.swift */; };
 		F999E99420EB58CA0076CB20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F999E99320EB58CA0076CB20 /* ViewController.swift */; };
 		F999E99720EB58CA0076CB20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F999E99520EB58CA0076CB20 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		277A7064093844B679472936 /* Pods-healer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-healer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-healer/Pods-healer.debug.xcconfig"; sourceTree = "<group>"; };
+		4713B69A03B2AB88ADDAA64E /* libPods-healer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-healer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F999E98E20EB58CA0076CB20 /* healer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = healer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F999E99120EB58CA0076CB20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F999E99320EB58CA0076CB20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		F999E99820EB58CC0076CB20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F999E99B20EB58CC0076CB20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F999E99D20EB58CC0076CB20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC83C293FF96F48585356726 /* Pods-healer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-healer.release.xcconfig"; path = "Pods/Target Support Files/Pods-healer/Pods-healer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC7D0733344BDA5FDBCE1B6E /* libPods-healer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3773173B39CD99D18B6984D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4713B69A03B2AB88ADDAA64E /* libPods-healer.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		57B1BB2B40787D0C61DC1877 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				277A7064093844B679472936 /* Pods-healer.debug.xcconfig */,
+				FC83C293FF96F48585356726 /* Pods-healer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F999E98520EB58CA0076CB20 = {
 			isa = PBXGroup;
 			children = (
 				F999E99020EB58CA0076CB20 /* healer */,
 				F999E98F20EB58CA0076CB20 /* Products */,
+				57B1BB2B40787D0C61DC1877 /* Pods */,
+				3773173B39CD99D18B6984D9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +95,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F999E9A020EB58CC0076CB20 /* Build configuration list for PBXNativeTarget "healer" */;
 			buildPhases = (
+				CF8C2F0D180349DCEDD4C50C /* [CP] Check Pods Manifest.lock */,
 				F999E98A20EB58CA0076CB20 /* Sources */,
 				F999E98B20EB58CA0076CB20 /* Frameworks */,
 				F999E98C20EB58CA0076CB20 /* Resources */,
@@ -129,6 +154,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CF8C2F0D180349DCEDD4C50C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-healer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F999E98A20EB58CA0076CB20 /* Sources */ = {
@@ -278,6 +324,7 @@
 		};
 		F999E9A120EB58CC0076CB20 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 277A7064093844B679472936 /* Pods-healer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -295,6 +342,7 @@
 		};
 		F999E9A220EB58CC0076CB20 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC83C293FF96F48585356726 /* Pods-healer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
