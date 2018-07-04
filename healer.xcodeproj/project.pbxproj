@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5624B80D20EBFAD2006D6573 /* questionnaire.json in Resources */ = {isa = PBXBuildFile; fileRef = 5624B80C20EBFAD1006D6573 /* questionnaire.json */; };
+		5624B80F20EC0190006D6573 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5624B80E20EC0190006D6573 /* Question.swift */; };
+		5624B81320ECA66C006D6573 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5624B81220ECA66C006D6573 /* QuestionTableViewCell.swift */; };
+		5624B81520ECB071006D6573 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5624B81420ECB071006D6573 /* Response.swift */; };
+		5625A27120ED07E6006AF188 /* getDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5625A27020ED07E6006AF188 /* getDatas.swift */; };
 		5644C68820EB9B8F008E1C32 /* Montserrat-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5644C66B20EB9B8F008E1C32 /* Montserrat-LightItalic.ttf */; };
 		5644C68920EB9B8F008E1C32 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5644C66C20EB9B8F008E1C32 /* Montserrat-Medium.ttf */; };
 		5644C68A20EB9B8F008E1C32 /* Montserrat-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5644C66D20EB9B8F008E1C32 /* Montserrat-BoldItalic.ttf */; };
@@ -46,6 +51,11 @@
 /* Begin PBXFileReference section */
 		277A7064093844B679472936 /* Pods-healer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-healer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-healer/Pods-healer.debug.xcconfig"; sourceTree = "<group>"; };
 		4713B69A03B2AB88ADDAA64E /* libPods-healer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-healer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5624B80C20EBFAD1006D6573 /* questionnaire.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questionnaire.json; sourceTree = "<group>"; };
+		5624B80E20EC0190006D6573 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		5624B81220ECA66C006D6573 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
+		5624B81420ECB071006D6573 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		5625A27020ED07E6006AF188 /* getDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getDatas.swift; sourceTree = "<group>"; };
 		5644C66B20EB9B8F008E1C32 /* Montserrat-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-LightItalic.ttf"; sourceTree = "<group>"; };
 		5644C66C20EB9B8F008E1C32 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		5644C66D20EB9B8F008E1C32 /* Montserrat-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -169,7 +179,6 @@
 			isa = PBXGroup;
 			children = (
 				F999E99020EB58CA0076CB20 /* healer */,
-				F999E98F20EB58CA0076CB20 /* Products */,
 				57B1BB2B40787D0C61DC1877 /* Pods */,
 				3773173B39CD99D18B6984D9 /* Frameworks */,
 			);
@@ -181,6 +190,7 @@
 				F999E98E20EB58CA0076CB20 /* healer.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		F999E99020EB58CA0076CB20 /* healer */ = {
@@ -189,10 +199,16 @@
 				5644C66920EB9B8F008E1C32 /* fonts */,
 				F999E99120EB58CA0076CB20 /* AppDelegate.swift */,
 				F999E99320EB58CA0076CB20 /* ViewController.swift */,
+				5624B80C20EBFAD1006D6573 /* questionnaire.json */,
 				F999E99520EB58CA0076CB20 /* Main.storyboard */,
 				F999E99820EB58CC0076CB20 /* Assets.xcassets */,
 				F999E99A20EB58CC0076CB20 /* LaunchScreen.storyboard */,
 				F999E99D20EB58CC0076CB20 /* Info.plist */,
+				5624B80E20EC0190006D6573 /* Question.swift */,
+				5624B81220ECA66C006D6573 /* QuestionTableViewCell.swift */,
+				5624B81420ECB071006D6573 /* Response.swift */,
+				F999E98F20EB58CA0076CB20 /* Products */,
+				5625A27020ED07E6006AF188 /* getDatas.swift */,
 			);
 			path = healer;
 			sourceTree = "<group>";
@@ -257,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5644C69920EB9B8F008E1C32 /* Montserrat-SemiBoldItalic.ttf in Resources */,
+				5624B80D20EBFAD2006D6573 /* questionnaire.json in Resources */,
 				5644C69B20EB9B8F008E1C32 /* Archivo-Regular.ttf in Resources */,
 				5644C69520EB9B8F008E1C32 /* OFL.txt in Resources */,
 				5644C68E20EB9B8F008E1C32 /* Montserrat-Thin.ttf in Resources */,
@@ -318,8 +335,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5625A27120ED07E6006AF188 /* getDatas.swift in Sources */,
+				5624B80F20EC0190006D6573 /* Question.swift in Sources */,
+				5624B81320ECA66C006D6573 /* QuestionTableViewCell.swift in Sources */,
 				F999E99420EB58CA0076CB20 /* ViewController.swift in Sources */,
 				F999E99220EB58CA0076CB20 /* AppDelegate.swift in Sources */,
+				5624B81520ECB071006D6573 /* Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

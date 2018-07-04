@@ -1,0 +1,9 @@
+{
+    "question": "ma question ?",
+    "questionId": 54,
+    "response": [
+        { responseText: "premiere reponse", id: 31},
+        { responseText: "deuxieme reponse", id: 32},
+        { responseText: "troisieme reponse", id: 33},
+    ]
+}
