@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     }
     
     func setUpStyles() {
-        validateButton?.layer.cornerRadius = 8
+        validateButton?.layer.cornerRadius = 25
         headerContainer?.layer.cornerRadius = 8
     }
 
