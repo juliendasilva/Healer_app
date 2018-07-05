@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     var appDelegate = UIApplication.shared.delegate as? AppDelegate
     let urlString = "https://inspecteurdoc.scalingo.io/rest/api?start=1"
     var questionClass = Question()
+    var myIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,6 +97,12 @@ extension ViewController: UITableViewDataSource {
             cell.cellLabel.text = questionClass.response[indexPath.row].reponse
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        myIndex = indexPath.row
+        performSegue(withIdentifier: "segue", sender: self)
+        print("myIndex\(myIndex)")
     }
     
 }
