@@ -11,36 +11,32 @@ import Alamofire
 import Alamofire_Synchronous
 import SwiftyJSON
 
-func getData() {
-    print("getData is called")
-    let urlString = "https://inspecteurdoc.scalingo.io/rest/api?start=1"
-    
-    let appDelegate = UIApplication.shared.delegate as? AppDelegate
-    var questionLabel : String? = appDelegate?.questionLabel
-    
-    Alamofire.request(urlString, encoding: JSONEncoding.default, headers: nil).responseJSON {
-        response in
-        switch response.result {
-        case .success(let value):
-            print("success")
-            let jsonVariable = JSON(value)
-            let responseArray = jsonVariable["reponses"].arrayValue
-            
-            let question = Question()
-
-            for object in responseArray {
-                let response = Response()
-                response.reponse = object["reponse"].stringValue
-                response.id = object["id"].intValue
-                question.response.append(response)
-            }
-            question.questionId = jsonVariable["id"].intValue
-            question.label = jsonVariable["question"].stringValue
-            questionLabel = question.label
-            print("getData is called")
-            break
-        case .failure(let error):
-            print(error)
-        }
-    }
-}
+//func getData(urlString: String, questionClass: Question, question: UILabel) {
+//    Alamofire.request(urlString, encoding: JSONEncoding.default, headers: nil).responseJSON {
+//        response in
+//        switch response.result {
+//        case .success(let value):
+//            print("get data is called")
+//            let jsonVariable = JSON(value)
+//            question.text = jsonVariable["question"].stringValue
+//            
+//            
+//            let responseArray = jsonVariable["reponses"].arrayValue
+//            
+//            for object in responseArray {
+//                let response = Response()
+//                response.reponse = object["reponse"].stringValue
+//                response.id = object["id"].intValue
+//                questionClass.response.append(response)
+//            }
+//            questionClass.questionId = jsonVariable["id"].intValue
+//            questionClass.label = jsonVariable["question"].stringValue
+//            self.tableView.reloadData()
+//            
+//            print("getData is finished")
+//            break
+//        case .failure(let error):
+//            print(error)
+//        }
+//    }
+//}

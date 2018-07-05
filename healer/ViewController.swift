@@ -16,18 +16,16 @@ class ViewController: UIViewController {
     @IBOutlet var question: UILabel!
     @IBOutlet var validateButton: UIButton!
     
+    @IBAction func validateButtonFunc(_ sender: Any) {
+        questionClass = Question()
+        workflow(url: "reponse=3")
+    }
     @IBOutlet var tableView: UITableView!
-    var appDelegate = UIApplication.shared.delegate as? AppDelegate
-    let urlString = "https://inspecteurdoc.scalingo.io/rest/api?start=1"
     var questionClass = Question()
     var myIndex = 0
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        tableView.separatorColor = UIColor.white
-        
-        //getData()
+    func workflow( url: String) {
+        let urlString = "https://inspecteurdoc.scalingo.io/rest/api?\(url)"
         Alamofire.request(urlString, encoding: JSONEncoding.default, headers: nil).responseJSON {
             response in
             switch response.result {
@@ -48,13 +46,20 @@ class ViewController: UIViewController {
                 self.questionClass.questionId = jsonVariable["id"].intValue
                 self.questionClass.label = jsonVariable["question"].stringValue
                 self.tableView.reloadData()
-
+                
                 print("getData is finished")
                 break
             case .failure(let error):
                 print(error)
             }
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.separatorColor = UIColor.white
+        workflow(url: "start=1")
         setUpStyles()
     }
     
