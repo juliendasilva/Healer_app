@@ -19,49 +19,42 @@ class ViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     var appDelegate = UIApplication.shared.delegate as? AppDelegate
     let urlString = "https://inspecteurdoc.scalingo.io/rest/api?start=1"
+    var questionClass = Question()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //getData()
-        var questionLabelDelegate : String? = appDelegate?.questionLabel
         
+        tableView.separatorColor = UIColor.white
+        
+        //getData()
         Alamofire.request(urlString, encoding: JSONEncoding.default, headers: nil).responseJSON {
             response in
             switch response.result {
             case .success(let value):
                 print("get data is called")
                 let jsonVariable = JSON(value)
+                self.question.text = jsonVariable["question"].stringValue
                 
-                questionLabelDelegate = jsonVariable["question"].stringValue
-                self.question.text = questionLabelDelegate
                 
                 let responseArray = jsonVariable["reponses"].arrayValue
-                
-                let questionClass = Question()
-                questionLabelDelegate = questionClass.label
                 
                 for object in responseArray {
                     let response = Response()
                     response.reponse = object["reponse"].stringValue
                     response.id = object["id"].intValue
-                    questionClass.response.append(response)
+                    self.questionClass.response.append(response)
                 }
-                print(questionClass.response[0])
-                questionClass.questionId = jsonVariable["id"].intValue
-                questionClass.label = jsonVariable["question"].stringValue
+                self.questionClass.questionId = jsonVariable["id"].intValue
+                self.questionClass.label = jsonVariable["question"].stringValue
+                self.tableView.reloadData()
+
                 print("getData is finished")
                 break
             case .failure(let error):
                 print(error)
             }
         }
-        //
         setUpStyles()
-
-        // si besoin plus tard de recharger les informations dans le TableView
-//         tableView.reloadData()
-        // => ça va réappeler le dataSource et TADA !!!
-        // voir code ci-dessous -- getData
     }
     
     func setUpStyles() {
@@ -91,18 +84,19 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //combien de cellules = combien de questions retournées par l'API
-        return 1
+        return questionClass.response.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // on retourne une cellule pour une question
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: QuestionTableViewCell.identifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: QuestionTableViewCell.identifier, for: indexPath) as! QuestionTableViewCell
         // injecter la question dans la cellule pour la remplir avec les informations
-        
+        if(questionClass.response.count > 0){
+            cell.cellLabel.text = questionClass.response[indexPath.row].reponse
+        }
         return cell
     }
-    
     
 }
 
