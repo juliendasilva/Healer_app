@@ -10,5 +10,5 @@ import Foundation
 
 class Response {
     var id: Int!
-    var responseText: String!
+    var reponse: String!
 }

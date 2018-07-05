@@ -8,33 +8,36 @@
 
 import Foundation
 import Alamofire
+import Alamofire_Synchronous
 import SwiftyJSON
 
 func getData() {
     print("getData is called")
-    let urlString = "http://172.20.10.2:8000/rest/api"
+    let urlString = "https://inspecteurdoc.scalingo.io/rest/api?start=1"
     
-    Alamofire.request(urlString, parameters: ["start": "1"],encoding: JSONEncoding.default, headers: nil).responseJSON {
+    let appDelegate = UIApplication.shared.delegate as? AppDelegate
+    var questionLabel : String? = appDelegate?.questionLabel
+    
+    Alamofire.request(urlString, encoding: JSONEncoding.default, headers: nil).responseJSON {
         response in
         switch response.result {
         case .success(let value):
+            print("success")
             let jsonVariable = JSON(value)
-            print("JSON: \(jsonVariable)")
-            let responseArray = jsonVariable["response"].arrayValue
+            let responseArray = jsonVariable["reponses"].arrayValue
             
             let question = Question()
-            
+
             for object in responseArray {
                 let response = Response()
-                response.responseText = object["responseText"].stringValue
+                response.reponse = object["reponse"].stringValue
                 response.id = object["id"].intValue
                 question.response.append(response)
             }
-            
-            question.questionId = jsonVariable["questionId"].intValue
+            question.questionId = jsonVariable["id"].intValue
             question.label = jsonVariable["question"].stringValue
-            
-//            return responseArray
+            questionLabel = question.label
+            print("getData is called")
             break
         case .failure(let error):
             print(error)

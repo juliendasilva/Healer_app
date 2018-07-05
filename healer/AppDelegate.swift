@@ -12,11 +12,16 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-    var question: String?
+    
+    var questionLabel: String?
+    
+    let barButtonAppearance = UIBarButtonItem.appearance()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let backButton = UIImage(named: "backbutton")
+        let backButtonImage = backButton?.stretchableImage(withLeftCapWidth: 0, topCapHeight: 10)
+        barButtonAppearance.setBackButtonBackgroundImage(backButtonImage, for: .normal, barMetrics: .default)
         return true
     }
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		561FD7F320ED344500DED40C /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FD7F220ED344500DED40C /* HomeController.swift */; };
+		561FD7F920ED5A1600DED40C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FD7F820ED5A1600DED40C /* FirstViewController.swift */; };
 		5624B80D20EBFAD2006D6573 /* questionnaire.json in Resources */ = {isa = PBXBuildFile; fileRef = 5624B80C20EBFAD1006D6573 /* questionnaire.json */; };
 		5624B80F20EC0190006D6573 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5624B80E20EC0190006D6573 /* Question.swift */; };
 		5624B81320ECA66C006D6573 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5624B81220ECA66C006D6573 /* QuestionTableViewCell.swift */; };
@@ -41,6 +42,7 @@
 		5644C6A120EB9B8F008E1C32 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5644C68520EB9B8F008E1C32 /* OFL.txt */; };
 		5644C6A220EB9B8F008E1C32 /* Archivo-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5644C68620EB9B8F008E1C32 /* Archivo-Italic.ttf */; };
 		5644C6A320EB9B8F008E1C32 /* Archivo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5644C68720EB9B8F008E1C32 /* Archivo-Bold.ttf */; };
+		566D900F20EE076E0024D568 /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566D900E20EE076E0024D568 /* ChartsViewController.swift */; };
 		EC7D0733344BDA5FDBCE1B6E /* libPods-healer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4713B69A03B2AB88ADDAA64E /* libPods-healer.a */; };
 		F999E99220EB58CA0076CB20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F999E99120EB58CA0076CB20 /* AppDelegate.swift */; };
 		F999E99420EB58CA0076CB20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F999E99320EB58CA0076CB20 /* ViewController.swift */; };
@@ -53,6 +55,7 @@
 		277A7064093844B679472936 /* Pods-healer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-healer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-healer/Pods-healer.debug.xcconfig"; sourceTree = "<group>"; };
 		4713B69A03B2AB88ADDAA64E /* libPods-healer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-healer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		561FD7F220ED344500DED40C /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		561FD7F820ED5A1600DED40C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		5624B80C20EBFAD1006D6573 /* questionnaire.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questionnaire.json; sourceTree = "<group>"; };
 		5624B80E20EC0190006D6573 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		5624B81220ECA66C006D6573 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
@@ -86,6 +89,7 @@
 		5644C68520EB9B8F008E1C32 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		5644C68620EB9B8F008E1C32 /* Archivo-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Archivo-Italic.ttf"; sourceTree = "<group>"; };
 		5644C68720EB9B8F008E1C32 /* Archivo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Archivo-Bold.ttf"; sourceTree = "<group>"; };
+		566D900E20EE076E0024D568 /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
 		F999E98E20EB58CA0076CB20 /* healer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = healer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F999E99120EB58CA0076CB20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F999E99320EB58CA0076CB20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -212,6 +216,8 @@
 				F999E98F20EB58CA0076CB20 /* Products */,
 				5625A27020ED07E6006AF188 /* getDatas.swift */,
 				561FD7F220ED344500DED40C /* HomeController.swift */,
+				561FD7F820ED5A1600DED40C /* FirstViewController.swift */,
+				566D900E20EE076E0024D568 /* ChartsViewController.swift */,
 			);
 			path = healer;
 			sourceTree = "<group>";
@@ -341,6 +347,8 @@
 				5625A27120ED07E6006AF188 /* getDatas.swift in Sources */,
 				5624B80F20EC0190006D6573 /* Question.swift in Sources */,
 				561FD7F320ED344500DED40C /* HomeController.swift in Sources */,
+				566D900F20EE076E0024D568 /* ChartsViewController.swift in Sources */,
+				561FD7F920ED5A1600DED40C /* FirstViewController.swift in Sources */,
 				5624B81320ECA66C006D6573 /* QuestionTableViewCell.swift in Sources */,
 				F999E99420EB58CA0076CB20 /* ViewController.swift in Sources */,
 				F999E99220EB58CA0076CB20 /* AppDelegate.swift in Sources */,

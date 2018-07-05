@@ -4,6 +4,8 @@
 target 'healer' do
     pod 'Alamofire', '~> 4.7'
     pod 'SwiftyJSON', '~> 4.0'
+    pod 'Charts'
+    pod 'Alamofire-Synchronous', '~> 4.0'
 
   # Pods for healer
 

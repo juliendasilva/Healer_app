@@ -20,10 +20,25 @@ class HomeController: UIViewController {
         // Do any additional setup after loading the view.
         
     }
+    
+//    private func setupNavigationBarItems() {
+//        navigationItem.backBarButtonItem = 
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    @IBAction func buttonClick(_ sender: UIButton) {
+        UIButton.animate(withDuration: 0.1,
+                         animations: {
+                            sender.transform = CGAffineTransform(scaleX: 0.975, y: 0.96)
+        },
+                         completion: { finish in
+                            UIButton.animate(withDuration: 0.2, animations: {
+                                sender.transform = CGAffineTransform.identity
+                            })
+        })
+    }
 }
