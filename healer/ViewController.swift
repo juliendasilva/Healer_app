@@ -16,7 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet var question: UILabel!
     @IBOutlet var validateButton: UIButton!
     
-    @IBAction func validateButtonFunc(_ sender: Any) {
+    @IBAction func validateButtonFunc(_ sender: QuestionTableViewCell) {
+//        print(questionClass.response[self.tableView.indexPathForCell(sender)].id)
         questionClass = Question()
         workflow(url: "reponse=3")
     }
@@ -105,10 +106,9 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        myIndex = indexPath.row
-        performSegue(withIdentifier: "segue", sender: self)
-        print("myIndex\(myIndex)")
+        //        myIndex = indexPath.row
+        //        performSegue(withIdentifier: "segue", sender: self)
+        print("I SELECT RAW")
     }
-    
 }
 
