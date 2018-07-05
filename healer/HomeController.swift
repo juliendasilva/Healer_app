@@ -17,28 +17,35 @@ class HomeController: UIViewController {
         self.navigationController?.isNavigationBarHidden = true
         buttonChecker?.layer.cornerRadius = 25
         buttonStats?.layer.cornerRadius = 25
-        // Do any additional setup after loading the view.
-        
     }
-    
-//    private func setupNavigationBarItems() {
-//        navigationItem.backBarButtonItem = 
-//    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func buttonClick(_ sender: UIButton) {
+    @IBAction func buttonStats(_ sender: UIButton) {
         UIButton.animate(withDuration: 0.1,
                          animations: {
-                            sender.transform = CGAffineTransform(scaleX: 0.975, y: 0.96)
+                            sender.transform = CGAffineTransform(scaleX: 0.875, y: 0.86)
         },
                          completion: { finish in
-                            UIButton.animate(withDuration: 0.2, animations: {
+                            UIButton.animate(withDuration: 0.1, animations: {
                                 sender.transform = CGAffineTransform.identity
                             })
         })
+    }
+    @IBAction func buttonClick(_ sender: UIButton) {
+        UIButton.animate(withDuration: 0.1,
+                         animations: {
+                            sender.transform = CGAffineTransform(scaleX: 0.875, y: 0.86)
+        },
+                         completion: { finish in
+                            UIButton.animate(withDuration: 0.1, animations: {
+                                sender.transform = CGAffineTransform.identity
+                            })
+        })
+        
     }
 }
