@@ -6,6 +6,8 @@ InVision available [here](https://invis.io/BKMMNVSGHRM)
 
 ## Project
 
+[![GuardRails badge](https://badges.production.guardrails.io/juliendasilva/Healer_app.svg)](https://www.guardrails.io)
+
 Winter arrives, takes the initiative and installs Healer not to wait 1 week your doctor. NEW: See epidemics around you in real time and take the right precautions!
 
 * This app is implemented in Swift 4
